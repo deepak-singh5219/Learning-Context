@@ -7,7 +7,7 @@ class Navbar extends Component {
   render() { 
     console.log(this.context);
     const {isLightTheme, light, dark} = this.context;
-    const theme = !isLightTheme? light: dark;
+    const theme = isLightTheme? light: dark;
     return ( 
       <nav style={{'background':theme.bg}}>
         <h1>Context App</h1>
