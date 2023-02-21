@@ -39,7 +39,6 @@ class BookList extends Component {
           }
         }
       </ThemeContext.Consumer>)
-
         }
         }
       </AuthContext.Consumer>
