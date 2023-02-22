@@ -1,19 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
 
-
-export const ToggleAuth = () => {
+const ToggleAuth = () => {
+  const {isAuth, toggleAuth} = useContext(AuthContext);
   return (
-    <AuthContext.Consumer>
-        {
-            (authContext) => {
-                const {isAuth,toggleAuth} = authContext;
-                 return (
-                    <button onClick={toggleAuth}>{!isAuth?'Login':'Logout'}</button>
-                 )
-            }
-        }
-    </AuthContext.Consumer>
-    
+    <button onClick={toggleAuth}>{!isAuth?'Login':'Logout'}</button>
   )
 }
+
+export default ToggleAuth;
